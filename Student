@@ -2,13 +2,11 @@ import java.util.*;
 
 // Класс для студента
 class Student {
-    // Приватные поля
     private String name;
     private String group;
     private int course;
     private Map<String, Integer> grades;
 
-    // Конструктор для создания студента
     public Student(String name, String group, int course, Map<String, Integer> grades) {
         this.name = name;
         this.group = group;
@@ -16,7 +14,6 @@ class Student {
         this.grades = grades;
     }
 
-    // Геттеры и сеттеры
     public String getName() {
         return name;
     }
@@ -49,7 +46,6 @@ class Student {
         this.grades = grades;
     }
 
-    // Метод для вычисления среднего балла
     public double getAverageGrade() {
         int sum = 0;
         for (int grade : grades.values()) {
@@ -58,7 +54,6 @@ class Student {
         return (double) sum / grades.size();
     }
 
-    // Метод для перевода на следующий курс
     public void promoteToNextCourse() {
         if (getAverageGrade() >= 3.0) {
             course++;
