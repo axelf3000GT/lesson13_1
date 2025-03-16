@@ -17,26 +17,22 @@ public class Main {
             Student student = students.get(i);
             if (student.getAverageGrade() < 3.0) {
                 students.remove(i);
-                i--; // Уменьшаем индекс, чтобы не пропустить следующий элемент
+                i--; 
             }
         }
 
-        // Переводим студентов на следующий курс, если их средний балл >= 3
         for (Student student : students) {
             student.promoteToNextCourse();
         }
 
 
-        // Выводим студентов на курсе 2
         printStudents(students, 2);
-        // Выводим студентов на курсе 3
         printStudents(students, 3);
-        // Выводим студентов на курсе 4
         printStudents(students, 4);
 
     }
 
-    // Метод для вывода студентов на указанном курсе
+
     public static void printStudents(List<Student> students, int course) {
         System.out.println("Студенты на курсе " + course + ":");
         for (Student student : students) {
